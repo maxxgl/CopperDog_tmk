@@ -144,24 +144,24 @@ static void select_row(uint8_t row)
     // Output low(DDR:1, PORT:0) to select
     switch (row) {
         case 0:
-            DDRB  |= (1<<0);
-            PORTB &= ~(1<<0);
+            DDRB  |= (1<<7);
+            PORTB &= ~(1<<7);
             break;
         case 1:
-            DDRB  |= (1<<1);
-            PORTB &= ~(1<<1);
-            break;
-        case 2:
             DDRB  |= (1<<2);
             PORTB &= ~(1<<2);
+            break;
+        case 2:
+            DDRB  |= (1<<1);
+            PORTB &= ~(1<<1);
             break;
         case 3:
             DDRB  |= (1<<3);
             PORTB &= ~(1<<3);
             break;
         case 4:
-            DDRB  |= (1<<7);
-            PORTB &= ~(1<<7);
+            DDRB  |= (1<<0);
+            PORTB &= ~(1<<0);
             break;
     }
 }
